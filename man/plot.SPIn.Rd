@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
-Plot the Results by SPIn
+Plot the Results from SPIn or bootSPIn
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
@@ -16,7 +16,7 @@ Plot the histogram, the kernel density estimate, the shortest probability interv
 \arguments{
   \item{x}{
 %%     ~~Describe \code{x} here~~
-SPIn object, result of \code{\link{SPIn}}.
+SPIn object, result of \code{\link{SPIn}} or \code{\link{bootSPIn}}.
 }
   \item{...}{
 See \code{plot}.
@@ -25,7 +25,7 @@ See \code{plot}.
 
 \references{
 %% ~put references to the literature/web site here ~
-An Optimal Weighting Strategy for Better Shortest Probability Intervals. (In preparation)
+Simulation efficient shortest probability intervals. (arXiv:1302.2142)
 }
 \author{
 %%  ~~who you are~~
@@ -37,11 +37,11 @@ Ying Liu yliu@stat.columbia.edu
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
-\code{\link{SPIn}}
+\code{\link{SPIn}},\code{\link{bootSPIn}}
 }
 \examples{
 x <- rgamma(100,3)
-r <- SPIn(x)
+r <- bootSPIn(x)
 plot(r)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

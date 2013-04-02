@@ -29,5 +29,5 @@ function(x, ...){
 #	lines(c(u,u-.05),rep(-.053,2))
 	text(l-d,-.05,round(l,2))
 	text(u+d,-.05,round(u,2))
-	legend('topright',c('SPIn','central'),col=c('red','black'),lty=c(1,1))
+	legend('topright',c('spin','central'),col=c('red','black'),lty=c(1,1))
 }

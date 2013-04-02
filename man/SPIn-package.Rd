@@ -2,20 +2,20 @@
 \alias{SPIn-package}
 \docType{package}
 \title{
-Optimal Shortest Probability Intervals
+Simulation Efficient Shortest Probability Intervals
 }
 \description{
-Adopt an optimal weighting strategy to compute better shortest probability intervals (SPIn).
+Implement an optimal weighting strategy to compute simulation efficient shortest probability intervals (spin's).
 }
 \details{
 \tabular{ll}{
 Package: \tab SPIn\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2011-12-30\cr
+Version: \tab 1.1\cr
+Date: \tab 2013-4-2\cr
 License: \tab GPL (>= 2)\cr
 }
-This package contains functions for constructing and plotting optimal shortest probability intervals.
+This package contains functions for constructing and plotting simulation efficient shortest probability intervals.
 }
 \author{
 Ying Liu
@@ -23,5 +23,5 @@ Ying Liu
 Maintainer: Ying Liu <yliu@stat.columbia.edu>
 }
 \references{
-An Optimal Weighting Strategy for Better Shortest Probability Intervals. (In preparation)
+Simulation efficient shortest probability intervals. (arXiv:1302.2142)
 }

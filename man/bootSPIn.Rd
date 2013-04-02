@@ -1,22 +1,26 @@
-\name{SPIn}
-\alias{SPIn}
+\name{bootSPIn}
+\alias{bootSPIn}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
-Simulation Efficient Shortest Probability Intervals
+SPIn with Bootstrap
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-Compute the shortest probability interval (spin) using an optimal weighting strategy.
+Compute the shortest probability interval (spin) using SPIn with bootstrap.
 }
 \usage{
-SPIn(x, conf = 0.95, bw = 0, lb = -Inf, ub = Inf, l=NA, u=NA)
+bootSPIn(x, n.boot = 50, conf = 0.95, bw = 0, lb = -Inf, ub = Inf, l = NA, u = NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
 %%     ~~Describe \code{x} here~~
 A vector of samples from the distribution.
+}
+  \item{n.boot}{
+%%     ~~Describe \code{n.boot} here~~
+Number of bootstraps.
 }
   \item{conf}{
 %%     ~~Describe \code{conf} here~~
@@ -37,7 +41,7 @@ Scalars, weighting centers (if provided).
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
-SPIn computes the shortest probability interval for a distribution using an optimal weighting strategy. Quadratic programming is used to determine the optimal weights.
+spin.boot computes the shortest probability interval for a distribution using SPIn with bootstrap.
 }
 \value{
 %%  ~Describe the value returned
@@ -45,7 +49,7 @@ SPIn computes the shortest probability interval for a distribution using an opti
 %%  \item{comp1 }{Description of 'comp1'}
 %%  \item{comp2 }{Description of 'comp2'}
 %% ...
-SPIn returns an object of \code{\link{class}} 'SPIn'. An object of class 'SPIn' is a list containing the following components:
+spin.boot returns an object of \code{\link{class}} 'SPIn'. An object of class 'SPIn' is a list containing the following components:
 \item{spin }{A vector of length 2 with the lower and upper endpoints of the interval.}
 \item{conf }{The confidence level.}
 \item{x }{A vector of samples from the distribution.}
@@ -69,11 +73,11 @@ This function assumes that the distribution is unimodal, and computes only 1 int
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
-\code{\link{bootSPIn}},\code{\link{plot.SPIn}}
+\code{\link{plot.SPIn}},\code{\link{SPIn}}
 }
 \examples{
 x <- rgamma(100,3)
-SPIn(x)
+bootSPIn(x)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
